@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const container = document.querySelector('.white-color');
 
@@ -26,6 +27,7 @@ const colors = [
 
 const material = new THREE.MeshBasicMaterial({
   color: colors[Math.floor(Math.random() * colors.length)],
+  side: THREE.DoubleSide,
 });
 
 const plane = new THREE.Mesh(geometry, material);
@@ -33,8 +35,14 @@ const plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
 camera.lookAt(0, 0, 0);
 
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.25;
+controls.enableZoom = true;
+
 function animate() {
   requestAnimationFrame(animate);
+  controls.update();
   renderer.render(scene, camera);
 }
 
