@@ -35,6 +35,13 @@ const plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
 camera.lookAt(0, 0, 0);
 
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+directionalLight.position.set(1, 1, 1).normalize();
+scene.add(directionalLight);
+
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.25;
