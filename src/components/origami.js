@@ -25,15 +25,50 @@ const colors = [
   0xff8158,
 ];
 
-const material = new THREE.MeshBasicMaterial({
-  color: colors[Math.floor(Math.random() * colors.length)],
+const getRandomIndices = length => {
+  const index1 = Math.floor(Math.random() * length);
+  let index2;
+
+  do {
+    index2 = Math.floor(Math.random() * length);
+  } while (index2 === index1);
+
+  return [index1, index2];
+};
+
+const [index1, index2] = getRandomIndices(colors.length);
+const frontColor = colors[index1];
+const backColor = colors[index2];
+
+const material = new THREE.ShaderMaterial({
+  uniforms: {
+    colorFront: { value: new THREE.Color(frontColor) },
+    colorBack: { value: new THREE.Color(backColor) },
+  },
+  vertexShader: `
+    varying vec3 vNormal;
+    void main() {
+      vNormal = normalize(normalMatrix * normal);
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  `,
+  fragmentShader: `
+    uniform vec3 colorFront;
+    uniform vec3 colorBack;
+    varying vec3 vNormal;
+    void main() {
+      if (gl_FrontFacing) {
+        gl_FragColor = vec4(colorFront, 1.0);
+      } else {
+        gl_FragColor = vec4(colorBack, 1.0);
+      }
+    }
+  `,
   side: THREE.DoubleSide,
 });
 
 const plane = new THREE.Mesh(geometry, material);
-
 scene.add(plane);
-camera.lookAt(0, 0, 0);
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
