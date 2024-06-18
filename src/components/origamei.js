@@ -19,8 +19,13 @@ container.appendChild(renderer.domElement);
 
 const geometry = new THREE.PlaneGeometry(2, 2);
 
+const colors = [
+  0x1aa24d, 0xf2482e, 0x343394, 0xfed53d, 0x000000, 0xff9fd5, 0x9ddef4,
+  0xff8158,
+];
+
 const material = new THREE.MeshBasicMaterial({
-  color: 'blue',
+  color: colors[Math.floor(Math.random() * colors.length)],
 });
 
 const plane = new THREE.Mesh(geometry, material);
