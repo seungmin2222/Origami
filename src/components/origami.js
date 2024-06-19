@@ -25,20 +25,20 @@ const colors = [
   0xff8158,
 ];
 
-const getRandomIndices = length => {
-  const index1 = Math.floor(Math.random() * length);
-  let index2;
+const getRandomColors = length => {
+  const frontColorIndex = Math.floor(Math.random() * length);
+  let backColorIndex;
 
   do {
-    index2 = Math.floor(Math.random() * length);
-  } while (index2 === index1);
+    backColorIndex = Math.floor(Math.random() * length);
+  } while (backColorIndex === frontColorIndex);
 
-  return [index1, index2];
+  return [frontColorIndex, backColorIndex];
 };
 
-const [index1, index2] = getRandomIndices(colors.length);
-const frontColor = colors[index1];
-const backColor = colors[index2];
+const [frontColorIndex, backColorIndex] = getRandomColors(colors.length);
+const frontColor = colors[frontColorIndex];
+const backColor = colors[backColorIndex];
 
 const material = new THREE.ShaderMaterial({
   uniforms: {
