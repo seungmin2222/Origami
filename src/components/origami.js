@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-const container = document.querySelector('.white-color');
+const container = document.querySelector('');
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
