@@ -27,7 +27,7 @@ const colors = [
 
 const getRandomColors = length => {
   const frontColorIndex = Math.floor(Math.random() * length);
-  let backColorIndex;
+  let backColorIndex = 0;
 
   do {
     backColorIndex = Math.floor(Math.random() * length);
