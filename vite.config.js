@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import vitestPlugin from 'vitest/vite-plugin';
 
 export default defineConfig({
   server: {
