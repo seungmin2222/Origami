@@ -10,6 +10,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        play: resolve(__dirname, 'play.html'),
+        gallery: resolve(__dirname, 'gallery.html'),
+        shareDetail: resolve(__dirname, 'shareDetail.html'),
         completePage: resolve(__dirname, 'completePage.html'),
       },
     },
