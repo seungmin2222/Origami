@@ -28,7 +28,9 @@ Origami:3D는 아날로그 종이접기를 구현한 종이접기 3D 시뮬레�
 
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=black"/> <img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=black"/> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/> <img src="https://img.shields.io/badge/threedotjs-00AFAA?style=for-the-badge&logo=threedotjs&logoColor=black"/>
 
-<img src="[https://img.shields.io/badge/firebase-DD2C00?style=for-the-badge&logo=firebase&logoColor=black](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=black)"/>
+### Database
+
+<img src="https://img.shields.io/badge/firebase-DD2C00?style=for-the-badge&logo=firebase&logoColor=black(https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=black)"/>
 
 ### Deployment
 
@@ -36,11 +38,11 @@ Origami:3D는 아날로그 종이접기를 구현한 종이접기 3D 시뮬레�
 
 # 📍 Index
 
-- [Motivation](https://www.notion.so/README-md-87f0d4e93e5241c7b644c4aa97fe4e4e?pvs=21)
-- [Features](https://www.notion.so/README-md-87f0d4e93e5241c7b644c4aa97fe4e4e?pvs=21)
-- [Challenges](https://www.notion.so/README-md-87f0d4e93e5241c7b644c4aa97fe4e4e?pvs=21)
-- [Scheduls](https://www.notion.so/README-md-87f0d4e93e5241c7b644c4aa97fe4e4e?pvs=21)
-- [회고](https://www.notion.so/README-md-87f0d4e93e5241c7b644c4aa97fe4e4e?pvs=21)
+- [Motivation](#-motivation)
+- [Features](#-features)
+- [Challenges](#-challenges)
+- [Schedules](#-schedules)
+- [회고](#-회고)
 
 # 📍 Motivation
 
@@ -251,8 +253,7 @@ Raycaster를 이용해 처음 닿는 면을 판별할 수 있지 않을까 생�
 
 ### 5 - 1. 회전 구현을 위한 방법들
 
-회전을 구현하는 데 있어, 다양한 경로를 통해 조사를 하다보니 회전을 구하는 데 대표적으로 사용할 수 있는 두 가지 주요 기술이 있다는걸 알게 되었습니다.
-
+회전을 구현하는 데 있어, 다양한 경로를 통해 조사를 하다보니 회전을 구하는 데 대표적으로 사용할 수 있는 두 가지 주요 기술이 있다는걸 알게 되었습니다.<br>
 하나는 오일러 각(Euler Angles)이고 또 다른 하나는 쿼터니언(Quaternions)입니다.
 
 - **오일러 각**
@@ -401,7 +402,7 @@ function App() {
 - 가상 DOM(Virtual DOM) 개념이 3D 씬에도 적용되어 변경된 부분만 실제 DOM과 동기화하여 불필요한 렌더링을 줄일 수 있다.
 - 전역 상태 관리 도구를 사용해 효율적인 상태 업데이트와 렌더링하여 동적인 3D 콘텐츠를 효율적으로 관리할 수 있다.
 
-# 📍 Scheduls
+# 📍 Schedules
 
 - 1주차
   - <a href="[https://www.figma.com/design/1BSlY1g4XgCFrR2uP2ZX7L/VACO%2FTeam3?node-id=0-1&t=cqOuMzvnxXHkV7Xe-0](https://www.figma.com/design/1BSlY1g4XgCFrR2uP2ZX7L/VACO%2FTeam3?node-id=0-1&t=cqOuMzvnxXHkV7Xe-0)">와이어프레임 작성</a>
