@@ -27,6 +27,7 @@
 <img src="https://img.shields.io/badge/netlify-00C7B7?style=for-the-badge&logo=netlify-&logoColor=black"/>
 
 # ✔️ Index
+
 - [✔️ Motivation](#️-motivation)
 - [🔍 Features](#-features)
   - [✔︎ 가장 가까운 꼭지점 선택](#︎-가장-가까운-꼭지점-선택)
