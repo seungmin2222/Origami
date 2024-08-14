@@ -1,24 +1,14 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d843be03-7329-459d-92b9-631f96235796" width="700px" alt="mainbg11">
+  <img src="https://github.com/user-attachments/assets/5158795f-b126-44d5-ac23-ed81fedfab66" width="700px" alt="mainbg11">
 </p>
 
-# ORIGAMI : 3D
-
-Origami:3D는 아날로그 종이접기를 구현한 종이접기 3D 시뮬레이션 입니다. 정교하고 생동감있는 종이접기 시뮬레이션을 구현하여<br>종이접기의 각도와 접힘, 펼쳐짐이 명확하게 보여주어 사용자들이 더 명확하게 파악할 수 있도록 했습니다.
-
-# 📍 Links
-
-<a href="[https://deploy-preview-73--dazzling-blini-fa20d1.netlify.app](https://deploy-preview-73--dazzling-blini-fa20d1.netlify.app/)">Deployed website</a> | <a href="https://github.com/Origami-5M/Origami">Web Repository</a>
-<br>
+<h1 align="center"> ORIGAMI : 3D </h1>
+<p align="center"><img src="https://github.com/user-attachments/assets/8baa6636-ef2e-41de-b7ea-a3c92ca40d69" width="500px" alt="readmegif"></p>
+<p align="center"><b>Origami:3D</b>는 아날로그 종이접기를 구현한 종이접기 3D 시뮬레이션 입니다. 정교하고 생동감있는 종이접기 시뮬레이션을 구현하여<br>종이접기의 각도와 접힘, 펼쳐짐이 명확하게 보여주어 사용자들이 더 명확하게 파악할 수 있도록 했습니다.</p>
+<p align="center"><a href="https://deploy-preview-73--dazzling-blini-fa20d1.netlify.app/">Deployed website</a> | <a href="https://github.com/Origami-5M/Origami">Web Repository</a></p>
 <br>
 
-# 📍 Preview
-
-종이접기를 할 수 있는 페이지입니다.
-
-<img src="https://github.com/user-attachments/assets/8baa6636-ef2e-41de-b7ea-a3c92ca40d69" width="800px" alt="readmegif">
-
-# 🛠️ Tech Stack
+# ✔️ Tech Stack
 
 ### Environment
 
@@ -36,7 +26,7 @@ Origami:3D는 아날로그 종이접기를 구현한 종이접기 3D 시뮬레�
 
 <img src="https://img.shields.io/badge/netlify-00C7B7?style=for-the-badge&logo=netlify-&logoColor=black"/>
 
-# 📍 Index
+# ✔️ Index
 
 - [Motivation](#-motivation)
 - [Features](#-features)
@@ -44,81 +34,86 @@ Origami:3D는 아날로그 종이접기를 구현한 종이접기 3D 시뮬레�
 - [Schedules](#-schedules)
 - [회고](#-회고)
 
-# 📍 Motivation
+# ✔️ Motivation
 
-현재 존재하는 종이접기 레퍼런스는 2D로만 이루어져 웹 상에서 종이접기의 복잡한 구조와 미적 요소를 정확하게 시각화하기 어려웠습니다.<br>
-이러한 한계 때문에 종이접기를 배우고 즐기려는 사람들이 더욱 정밀하고 창의적인 작업을 수행하는 데에 어려움을 겪고 있다 생각이 되었고<br>
+현재 존재하는 종이접기 레퍼런스는 2D로만 이루어져 웹 상에서 종이접기의 복잡한 구조와 미적 요소를 정확하게 시각화하기 어려웠습니다.
+이러한 한계 때문에 종이접기를 배우고 즐기려는 사람들이 더욱 정밀하고 창의적인 작업을 수행하는 데에 어려움을 겪고 있다 생각이 되었고
 <b>저희는 누구나 쉽게 3D로 종이접기 작품을 만들고 탐색할 수 있는 플랫폼을 제공하고자 이 프로젝트를 시작하게 되었습니다.</b> <br>
-3D로 구현된 Origami는 사용자들이 다양한 각도에서 종이접기를 탐색할 수 있게 하며, 접힘 방식과 각도를 명확하게 보여주어<br>
-각 부분의 위치와 형태를 더욱 정확하게 파악할 수 있도록 해주었습니다. 또한 Origami을 통해 사용자는 자신의 창의력을 발휘하여<br>
+<br>
+3D로 구현된 Origami는 사용자들이 다양한 각도에서 종이접기를 탐색할 수 있게 하며, 접힘 방식과 각도를 명확하게 보여주어
+각 부분의 위치와 형태를 더욱 정확하게 파악할 수 있도록 해주었습니다. 또한 Origami을 통해 사용자는 자신의 창의력을 발휘하여
 새로운 종이접기 작품을 만들고, 다른 사용자와 작품을 공유하며 아이디어를 교환할 수 있도록 하였습니다.
 
-# 📍 Features
+# 🔍 Features
 
-### 💡 가장 가까운 꼭지점 선택
+### ✔︎ 가장 가까운 꼭지점 선택
 
-<img src="https://github.com/user-attachments/assets/913b0abf-f0b0-42e8-ac82-fa7d0eebbae0" alt="edge">
+사용자가 종이 위에 mouseover 시 마우스와 가장 가까운 좌표를 찾아 표시됩니다.
 
-- 사용자가 종이 위에 mouseover 시 마우스와 가장 가까운 좌표를 찾아 표시됩니다.
+<img src="https://github.com/user-attachments/assets/913b0abf-f0b0-42e8-ac82-fa7d0eebbae0" width="600px" alt="edge"><br>
+<img src="https://github.com/user-attachments/assets/59205a83-ab4a-4f0c-af40-2db14fd29ebe"  width="600px" alt="edge">
 
-### 💡 종이 접기
+### ✔︎ 미리보기와 종이접기
 
-<img src="https://github.com/user-attachments/assets/4dc98033-8af9-4506-9524-cd79a9c780b7" alt="folding">
+첫번째 좌표를 클릭한 후 드래그하여 두번째 좌표에서 mouse up하게 되면 종이가 접힙니다.<br>두번째 좌표의 mouse up은 선분에 있는 꼭짓점만 가능합니다.<br>
 
-- 첫번째 점을 클릭 드래그 후 두번째 점에서 mousedown 시 종이가 접힙니다.
-  - 두번째 점은 mousedown은 선분에 있는 꼭짓점만 가능합니다.
-- 첫번째 좌표 클릭 후 드래그 시 mouseover되는 점마다의 미리보기가 나타납니다.
-- 첫번째 좌표 클릭 후 두번째 좌표에서 mousedown 시 종이가 접힙니다.
-  - 첫번째 좌표 기준으로 접힐 방향이 정해집니다.
-  - 회전축을 기준으로 종이가 접힙니다.
+<img src="https://github.com/user-attachments/assets/9530992d-c7be-4e99-930f-c27a06fcce4c" width="600px" alt="folding">
+<br><br>
 
-### 💡 종이 펼치기
+첫번째 좌표 클릭 후 드래그 시 mouse over되는 점마다 미리보기가 나타납니다.<br>
+두번째 좌표에서 mouse up 시 첫번째 좌표 기준으로 접힐 방향이 정해지고 종이가 접힙니다.<br>
+회전축을 기준으로 종이가 접힙니다.
 
-<img src="https://github.com/user-attachments/assets/8c9f531e-45f0-4921-89d2-c694f56d4f86" alt="unfolding">
+<img src="https://github.com/user-attachments/assets/4dc98033-8af9-4506-9524-cd79a9c780b7" width="600px" alt="folding"><br>
 
-- 접힌 종이 면을 클릭 시 종이가 펼쳐집니다.
+### ✔︎ 종이 펼치기
 
-### 💡 공유하기
+접힌 종이의 면을 클릭 시 종이가 펼쳐집니다.
 
-<img src="https://github.com/user-attachments/assets/d678783f-1a3c-4d70-8dd7-14f2a3da5403" alt="savename">
+<img src="https://github.com/user-attachments/assets/8c9f531e-45f0-4921-89d2-c694f56d4f86" width="600px" alt="unfolding"><br>
+<img src="https://github.com/user-attachments/assets/8f271fc3-3ab3-469f-ab7c-388eb6dafaee" width="600px" alt="unfolding">
 
-- 완료페이지에서 닉네임을 작성 후 share 버튼을 누르면 닉네임과 종이접기가 저장됩니다.
-- 갤러리페이지에서 저장한 종이접기 3D 화면과 닉네임이 모달창에 나타납니다.
+### ✔︎ 공유하기
 
-<img src="https://github.com/user-attachments/assets/d25dddf1-677f-4263-950d-e78e86a8271a" alt="link">
+완료페이지에서 닉네임을 작성 후 share 버튼을 누르면 닉네임과 종이접기가 저장됩니다.<br>
+갤러리페이지에서 저장한 종이접기 3D 화면과 닉네임이 모달창에 나타납니다.
 
-- 모달의 우측하단에 공유하기 버튼을 누르면 링크가 복사됩니다.
-- 링크를 웹상에 해당 링크를 입력하면 갤러리리스트에서 해당 모달창이 나타납니다.
+<img src="https://github.com/user-attachments/assets/d678783f-1a3c-4d70-8dd7-14f2a3da5403" width="600px" alt="savename">
 
-# 🔥 Challenges
+모달의 우측하단에 공유하기 버튼을 누르면 링크가 복사됩니다.<br>
+링크를 웹상에 해당 링크를 입력하면 갤러리리스트에서 해당 모달창이 나타납니다.
+
+<img src="https://github.com/user-attachments/assets/d25dddf1-677f-4263-950d-e78e86a8271a" width="600px" alt="link">
+
+# 💡 Challenges
 
 ## 1. 종이접기의 축을 어떻게 구할 수 있을까?
 
-- **종이접기 축 공식을 얻기 위한 노력**
-
-종이접기 접기를 구현하기위해 제일 처음 만난 챌린지는 그래서 축은 어떻게 구하지? 였습니다.
-
-종이접기 축을 구하는 공식을 알기 위해 여러 레퍼런스를 찾아보았고 Origami and Geometric Constructions의 저술에서 첫번째 시작점과 두번째 끝점의 거리의 1/2 시점에서 접힐 주름이 생긴다는 힌트를 얻을 수 있었습니다.
-
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3ef96709-185d-4c30-b75d-a1423dc7c4a4" alt="Untitled1">
+  <img src="https://github.com/user-attachments/assets/3ef96709-185d-4c30-b75d-a1423dc7c4a4" width="600px" alt="Untitled1">
 </p>
 
-- **우리만의 축을 만들어 보자!**
-<table>
+종이접기 접기를 구현하기위해 제일 처음 만난 챌린지는 그래서 축은 어떻게 구하지? 였습니다.<br>
+종이접기 축을 구하는 공식을 알기 위해 여러 레퍼런스를 찾아보았고 Origami and Geometric Constructions의 저술에서 첫번째 시작점과 두번째 끝점의 거리의 1/2 시점에서 접힐 주름이 생긴다는 힌트를 얻을 수 있었습니다.
+
+### 1 - 1. 우리만의 축을 만들어 보자!
+
+<table align="center">
   <tr>
-    <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/be34247d-f3f8-4c42-ae8b-a3c6e1327a4e" alt="Image 1" width="85%"></td>
-    <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/1c41094f-b57f-4e39-8d2e-91bf8058394e" alt="Image 2" width="85%"></td>
+    <td width="300px" align="center"><img src="https://github.com/user-attachments/assets/be34247d-f3f8-4c42-ae8b-a3c6e1327a4e" alt="Image 1" width="300px"></td>
+    <td width="300px" align="center"><img src="https://github.com/user-attachments/assets/1c41094f-b57f-4e39-8d2e-91bf8058394e" alt="Image 2" width="300px"></td>
   </tr>
 </table>
 
-첫번째 시작점과 두번째 끝점의 거리의 1/2 시점에서 접힐 주름이 생긴다는 힌트를 저희는 3D 종이접기로 옮겨야했습니다. 저희는 사용자가 처음 마우스를 드래그 하기 시작한 좌표와 뗀 좌표를 계산하여 벡터를 구하였고 두 점을 잇는 선분의 중간지점을 찾았습니다. 그리고 두 점의 벡터 방향을 90도로 회전 시켜야 했는데 z축 기준으로 90도 회전 시켜 3D 공간에서 저희가 원하는 축의 방향을 얻을 수 있었습니다. 그리고 두 점을 잇는 선분의 중앙, 즉 시작점에서 회전시킨 벡터를 기준으로 양쪽으로 확장 시켰습니다.
+첫번째 시작점과 두번째 끝점의 거리의 1/2 시점에서 접힐 주름이 생긴다는 힌트를 저희는 3D 종이접기로 옮겨야했습니다. 저희는 사용자가 처음 마우스를 드래그 하기 시작한 좌표와 뗀 좌표를 계산하여 벡터를 구하였고 두 점을 잇는 선분의 중간지점을 찾았습니다.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/216a4d48-a67b-4bf5-9ec6-7e980747abce" alt="Untitled 2">
 </p>
 
-- **근데 확장되는 축을 어떻게 종이의 크기 만큼 멈추게 할 수 있을까?**
+두 점의 벡터 방향을 90도로 회전 시켜야 했는데 z축 기준으로 90도 회전 시켜 3D 공간에서 저희가 원하는 축의 방향을 얻을 수 있었습니다. 그리고 두 점을 잇는 선분의 중앙, 즉 시작점에서 회전시킨 벡터를 기준으로 양쪽으로 확장 시켰습니다.
+
+### 1 - 2. 근데 확장되는 축을 어떻게 종이의 크기 만큼 멈추게 할 수 있을까?
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fe22166b-b3e9-40c4-9e08-03d6f740370f" width="300px" alt="Untitled 3">
@@ -126,27 +121,39 @@ Origami:3D는 아날로그 종이접기를 구현한 종이접기 3D 시뮬레�
 
 확장되고 있는 벡터의 축을 어떻게 멈추게 할 수 있을까? 라는 고민을 하였고 그럼 벡터의 축의 좌표와 종이의 경계점들의 좌표 중 하나와 만나는 순간 확장되는 것을 멈추게 하자 라는 생각을 하였습니다. 그래서 초기 종이의 크기를 기준으로 경계점들의 좌표와 만나면 확장되는 것을 멈추게 하였습니다.
 
-- **종이가 접힐 때 마다 축의 각도가 이상한데?**
+### 1 - 3. 종이가 접힐 때 마다 축의 각도가 이상한데?
 
 저희는 위에서 구현한 회전축을 가지고 접기 기능까지 구현을 해냈습니다. 하지만 여러번 종이를 접어보니 축의 위치가 미세하게 벗어나는 버그를 찾아낼 수 있었습니다. 이유를 분석해 보니 종이는 접힐 때마다 크기가 작아지는데 경계점의 좌표는 초기 종이의 경계점 그대로여서 끝점이 종이의 너비를 훨씬 벗어나 생기고 있기에 축의 각도가 어긋나고 있던 것 이였습니다. 결국 저희는 종이가 접힐때 마다 경계점을 업데이트해야 한다는 결론을 내렸습니다.
 
-- **업데이트되는 종이의 너비를 어떻게 지정해 줄 수 있을까?**
+### 1 - 4. 업데이트되는 종이의 너비를 어떻게 지정해 줄 수 있을까?
 
 문제는 사용자가 종이를 접을 수 있는 경우의 수가 너무 많다는 점 이였습니다. 이 많은 경우의 수의 너비를 모두 지정해서 경계점들을 찾기에는 너무나도 비효율적 이였습니다. 여러 방법을 찾아보다가 저희는 Convex Hull 알고리즘을 발견하게 되었습니다.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a304053e-6477-480b-aaf2-9a30e2619ebd" alt="Untitled 4">
+  <img src="https://github.com/user-attachments/assets/b889eebe-d5a9-4225-8716-33245b619886" width="600px" alt="Untitled 4">
 </p>
+
+> **_컨벡스 헐 알고리즘이란?_** <br>
+> 컨벡스 헐(Convex Hull) 알고리즘은 평면 상에서 이루고 있는 점들의 제일 외곽점들을 찾아 작은 다각형을 찾는 알고리즘.
+
+1. y좌표가 가장 작은 좌표를 기준점으로 잡는다.
+2. 기준점과의 기울기를 기준으로 반시계 방향으로 정렬한다.
+3. 첫번째 두번째 두 점을 이은 직선에 대해 현재 탐색중인 점이 왼쪽에 있다면 스택에 push하고 다음 점을 확인한다.
+4. 그렇지 않다면 스택을 pop한다.
+5. n번째 점까지 탐색이 끝나면 스택에는 컨벡스 헐을 구성하는 점들이 포함한다.
+   <br><br>
 
 저희는 Convex Hull 알고리즘을 이용하여 사용자가 종이를 접을 때마다 종이의 좌표 중 경계점 좌표들을 얻을 수 있었고 경계점들을 계속 업데이트하여 접힐때 마다 새로운 축을 얻을 수 있었습니다.
 
 ## 2. Convex Hull 알고리즘의 최적화
 
+미리보기 선분도 Convex Hull 알고리즘으로 구할 수 있겠다는 생각으로 회전축을 기준으로 접히는 영역의 좌표들을 반사 변환을 이용해 경계점의 좌표를 구했습니다. 하지만 모든 좌표를 순환하며 경계점을 판단하게 되면 처리 속도가 너무 오래걸린다는 단점이 있었습니다.
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8d45d675-a26b-4a1c-9a99-5f406734560e" width="300px" alt="Untitled 5">
 </p>
 
-미리보기 선분도 Convex Hull 알고리즘으로 구할 수 있겠다는 생각으로 회전축을 기준으로 접히는 영역의 좌표들을 반사 변환을 이용해 경계점의 좌표를 구했습니다. 하지만 모든 좌표를 순환하며 경계점을 판단하게 되면 처리 속도가 너무 오래걸린다는 단점이 있었습니다. 그래서 이 문제를 해결하기위해 y축 기준으로 두 집합(upper, lower)으로 나눴습니다. 각각의 집합으로 나눠서 순환시켜 하단과 상단 경계점들을 개별적으로 처리하여 각 점의 포함 여부를 쉽게 확인하고 효율적으로 Convex Hull을 구성시켜 시간복잡도를 줄였습니다.
+그래서 이 문제를 해결하기위해 y축 기준으로 두 집합(upper, lower)으로 나눴습니다. 각각의 집합으로 나눠서 순환시켜 하단과 상단 경계점들을 개별적으로 처리하여 각 점의 포함 여부를 쉽게 확인하고 효율적으로 Convex Hull을 구성시켜 시간복잡도를 줄였습니다.
 
 ## 3. 이제 접어보자!
 
@@ -207,7 +214,9 @@ Three.js의 3D 그래픽을 생성하고 조작하기 위해서는 공간 내 �
 
 > 반사변환(Reflection Transformation)은 주어진 축이나 평면을 기준으로 점을 대칭적으로 이동시키는 변환 방법입니다. 2차원 공간에서는 주로 x축, y축, y = x, y = -x와 같은 선을 기준으로 반사변환을 수행합니다.
 
-<img src="https://github.com/user-attachments/assets/cea7bdac-0998-4bb7-95c2-a7652641839f" alt="z-fighting">
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cea7bdac-0998-4bb7-95c2-a7652641839f" width="600px" alt="z-fighting">
+</p>
 
 모든 접힐 면이 반대편의 정확한 위치로 이동했지만 한가지 문제점이 발생했습니다.
 
@@ -235,7 +244,9 @@ Raycaster를 이용해 처음 닿는 면을 판별할 수 있지 않을까 생�
 
 ### 4 - 2. 두께 구현하기
 
-![z-fighting%ED%95%B4%EA%B2%B0](https://github.com/user-attachments/assets/90d00f4c-1a72-4628-8aa6-1465914e42b4)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/90d00f4c-1a72-4628-8aa6-1465914e42b4" width="600px" alt="z-fighting">
+</p>
 
 앞, 뒤를 판별한 값을 사용해 앞을 바라본 상태로 종이를 접었을 때 z 축 기준으로 약간의 두께를 추가해 z-Fighting 문제를 줄일 수 있었고, 종이가 어떤 방향으로 접혔는지에 따라 적절히 z 값을 조정하여 반사 변환을 시뮬레이션했습니다.
 
@@ -342,7 +353,7 @@ Raycaster를 이용해 처음 닿는 면을 판별할 수 있지 않을까 생�
   <img src="README%20md%2087f0d4e93e5241c7b644c4aa97fe4e4e/Untitled.gif" width="300px" alt="Untitled2">
 </p>
 
-# 📍React Three Fiber로 리팩토링 하려는 이유?
+# ✔️ React Three Fiber로 리팩토링 하려는 이유?
 
 ### 보일러플레이트 코드를 줄여서 코드의 가독성을 UP!
 
@@ -402,7 +413,7 @@ function App() {
 - 가상 DOM(Virtual DOM) 개념이 3D 씬에도 적용되어 변경된 부분만 실제 DOM과 동기화하여 불필요한 렌더링을 줄일 수 있다.
 - 전역 상태 관리 도구를 사용해 효율적인 상태 업데이트와 렌더링하여 동적인 3D 콘텐츠를 효율적으로 관리할 수 있다.
 
-# 📍 Schedules
+# ✔️ Schedules
 
 - 1주차
   - <a href="[https://www.figma.com/design/1BSlY1g4XgCFrR2uP2ZX7L/VACO%2FTeam3?node-id=0-1&t=cqOuMzvnxXHkV7Xe-0](https://www.figma.com/design/1BSlY1g4XgCFrR2uP2ZX7L/VACO%2FTeam3?node-id=0-1&t=cqOuMzvnxXHkV7Xe-0)">와이어프레임 작성</a>
@@ -418,9 +429,7 @@ function App() {
   - <a href="[https://github.com/orgs/Origami-5M/projects/1/views/4?pane=issue&itemId=67678248](https://github.com/orgs/Origami-5M/projects/1/views/4?pane=issue&itemId=67678248)">갤러리 페이지 정적화면 및 기능 구현</a>
   - <a href="[https://github.com/orgs/Origami-5M/projects/1/views/4?pane=issue&itemId=69231581](https://github.com/orgs/Origami-5M/projects/1/views/4?pane=issue&itemId=69231581)">가이드모드 데이터 구축</a>
 
----
-
-# 📍 회고
+# 📝 회고
 
 ### 이승민
 
