@@ -175,6 +175,8 @@
 
 ## 2. Convex Hull 알고리즘의 최적화
 
+미리보기 선분도 Convex Hull 알고리즘으로 구할 수 있겠다는 생각으로 회전축을 기준으로 접히는 영역의 좌표들을 반사 변환을 이용해 경계점의 좌표를 구했습니다. 하지만 모든 좌표를 순환하며 경계점을 판단하게 되면 처리 속도가 너무 오래걸린다는 단점이 있었습니다.
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8d45d675-a26b-4a1c-9a99-5f406734560e" width="300px" alt="Untitled 5">
 </p>
