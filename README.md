@@ -28,10 +28,10 @@
 
 # ✔️ Index
 
-- [Motivation](#-motivation)
+- [Motivation](#️-motivation)
 - [Features](#-features)
 - [Challenges](#-challenges)
-- [Schedules](#-schedules)
+- [Schedules](#️-schedules)
 - [회고](#-회고)
 
 # ✔️ Motivation
@@ -298,7 +298,7 @@ Raycaster를 이용해 처음 닿는 면을 판별할 수 있지 않을까 생�
 
 오일러 각을 사용한 연속적인 회전 적용은 예측 불가능하고 종종 잘못된 결과를 초래하여, 사용자 인터랙션 경험을 복잡하게 만들었습니다.
 
-## 5 - 2. 짐벌락의 해결책 쿼터니언
+### 5 - 2. 짐벌락의 해결책 쿼터니언
 
 이러한 문제를 해결하기 위해 쿼터니언을 사용한 회전 방식으로 전환하였습니다.
 
