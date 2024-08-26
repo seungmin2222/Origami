@@ -5,7 +5,7 @@
 <h1 align="center"> ORIGAMI : 3D </h1>
 <p align="center"><img src="https://github.com/user-attachments/assets/8baa6636-ef2e-41de-b7ea-a3c92ca40d69" width="500px" alt="readmegif"></p>
 <p align="center"><b>Origami:3D</b>는 아날로그 종이접기를 구현한 종이접기 3D 시뮬레이션 입니다. 정교하고 생동감있는 종이접기 시뮬레이션을 구현하여<br>종이접기의 각도와 접힘, 펼쳐짐이 명확하게 보여주어 사용자들이 더 명확하게 파악할 수 있도록 했습니다.</p>
-<p align="center"><a href="https://deploy-preview-73--dazzling-blini-fa20d1.netlify.app/">Deployed website</a> | <a href="https://github.com/Origami-5M/Origami">Web Repository</a></p>
+<p align="center"><a href="https://origami3d.online/">Deployed website</a> | <a href="https://github.com/Origami-5M/Origami">Web Repository</a></p>
 <br>
 
 # ✔️ Tech Stack
@@ -27,12 +27,39 @@
 <img src="https://img.shields.io/badge/netlify-00C7B7?style=for-the-badge&logo=netlify-&logoColor=black"/>
 
 # ✔️ Index
-
-- [Motivation](#️-motivation)
-- [Features](#-features)
-- [Challenges](#-challenges)
-- [Schedules](#️-schedules)
-- [회고](#-회고)
+- [✔️ Motivation](#️-motivation)
+- [🔍 Features](#-features)
+  - [✔︎ 가장 가까운 꼭지점 선택](#︎-가장-가까운-꼭지점-선택)
+  - [✔︎ 미리보기와 종이접기](#︎-미리보기와-종이접기)
+  - [✔︎ 종이 펼치기](#︎-종이-펼치기)
+  - [✔︎ 공유하기](#︎-공유하기)
+- [💡 Challenges](#-challenges)
+  - [1. 종이접기의 축을 어떻게 구할 수 있을까?](#1-종이접기의-축을-어떻게-구할-수-있을까)
+    - [1 - 1. 우리만의 축을 만들어 보자!](#1---1-우리만의-축을-만들어-보자)
+    - [1 - 2. 근데 확장되는 축을 어떻게 종이의 크기 만큼 멈추게 할 수 있을까?](#1---2-근데-확장되는-축을-어떻게-종이의-크기-만큼-멈추게-할-수-있을까)
+    - [1 - 3. 종이가 접힐 때 마다 축의 각도가 이상한데?](#1---3-종이가-접힐-때-마다-축의-각도가-이상한데)
+    - [1 - 4. 업데이트되는 종이의 너비를 어떻게 지정해 줄 수 있을까?](#1---4-업데이트되는-종이의-너비를-어떻게-지정해-줄-수-있을까)
+  - [2. Convex Hull 알고리즘의 최적화](#2-convex-hull-알고리즘의-최적화)
+  - [3. 이제 접어보자!](#3-이제-접어보자)
+    - [3 - 1. 접고자하는 부분의 판별](#3---1-접고자하는-부분의-판별)
+    - [3 - 2. 면의 분리](#3---2-면의-분리)
+    - [3 - 3. 어느 면이 접힐지에 대한 기준 세우기](#3---3-어느-면이-접힐지에-대한-기준-세우기)
+    - [3 - 4. 접기](#3---4-접기)
+  - [4. Z-Fighting 해결](#4-z-fighting-해결)
+    - [4 - 1. 사용자가 어느 방향을 바라보고 있는지 판별하기](#4---1-사용자가-어느-방향을-바라보고-있는지-판별하기)
+    - [4 - 2. 두께 구현하기](#4---2-두께-구현하기)
+  - [5. 펼치기](#5-펼치기)
+    - [5 - 1. 회전 구현을 위한 방법들](#5---1-회전-구현을-위한-방법들)
+    - [5 - 2. 짐벌락의 해결책 쿼터니언](#5---2-짐벌락의-해결책-쿼터니언)
+    - [5 - 3. 회전을 구현하기 위해 필요한 데이터들](#5---3-회전을-구현하기-위해-필요한-데이터들)
+- [✔️ React Three Fiber로 리팩토링 하려는 이유?](#️-react-three-fiber로-리팩토링-하려는-이유)
+  - [보일러플레이트 코드를 줄여서 코드의 가독성을 UP!](#보일러플레이트-코드를-줄여서-코드의-가독성을-up)
+  - [React의 hooks, context, 상태 관리 라이브러리 등을 3D 그래픽 개발에 활용할 수 있다.](#react의-hooks-context-상태-관리-라이브러리-등을-3d-그래픽-개발에-활용할-수-있다)
+- [✔️ Schedules](#️-schedules)
+- [📝 회고](#-회고)
+  - [이승민](#이승민)
+  - [정소희](#정소희)
+  - [주혜지](#주혜지)
 
 # ✔️ Motivation
 
