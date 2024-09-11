@@ -33,10 +33,12 @@ const fetchUserPositions = async userId => {
   try {
     const usersCollectionRef = collection(db, 'users', userId, 'positions');
     const usersCoordinatesRef = await getDocs(usersCollectionRef);
-    const positionsData = [];
-    usersCoordinatesRef.forEach(doc => {
-      positionsData.push(doc.data().positions);
+    const positionsPromises = usersCoordinatesRef.docs.map(doc => {
+      return doc.data().positions;
     });
+
+    const positionsData = await Promise.all(positionsPromises);
+
     return positionsData;
   } catch (error) {
     console.error(error);
