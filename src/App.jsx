@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-import Play from './Play.jsx';
-import MainPage from './MainPage.jsx';
+import PlayPage from './pages/PlayPage.jsx';
+import MainPage from './pages/MainPage.jsx';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path="/play" element={<Play />} />
+      <Route path="/play" element={<PlayPage />} />
     </Routes>
   );
 };

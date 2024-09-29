@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useTooltip, TOOLTIP_MESSAGES, TooltipText } from './utils/tooltip';
+import { useTooltip, TOOLTIP_MESSAGES, TooltipText } from '../../utils/tooltip';
 
 const GUIDE_IMAGES = {
   puppy: [

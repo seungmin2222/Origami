@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import Sidebar from './Sidebar';
-import { useTooltip, TOOLTIP_MESSAGES, TooltipText } from './utils/tooltip';
-import GuideSlide from './GuideSlide';
+import Sidebar from '../components/ui/Sidebar';
+import { useTooltip, TOOLTIP_MESSAGES, TooltipText } from '../utils/tooltip';
+import GuideSlide from '../components/ui/GuideSlide';
 import { useSearchParams } from 'react-router-dom';
 
 const commonButtonStyle = css`
@@ -127,7 +127,7 @@ const ButtonUl = styled.ul`
   gap: 20px;
   list-style: none;
 `;
-const Play = () => {
+const PlayPage = () => {
   const [searchParams] = useSearchParams();
   const mode = searchParams.get('mode');
 
@@ -221,4 +221,4 @@ const Play = () => {
   );
 };
 
-export default Play;
+export default PlayPage;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { useTooltip, TOOLTIP_MESSAGES, TooltipText } from './utils/tooltip';
+import { useTooltip, TOOLTIP_MESSAGES, TooltipText } from '../../utils/tooltip';
 
 const SidebarContainer = styled.aside`
   position: absolute;

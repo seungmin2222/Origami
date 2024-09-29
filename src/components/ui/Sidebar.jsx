@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import ModeSidebar from './ModeSidebar';
-import { useTooltip, TOOLTIP_MESSAGES, TooltipText } from './utils/tooltip';
+import { useTooltip, TOOLTIP_MESSAGES, TooltipText } from '../../utils/tooltip';
 import InfoTooltip from './InfoTooltip';
 
 const commonButtonStyle = css`
