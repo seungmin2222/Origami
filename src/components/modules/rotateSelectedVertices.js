@@ -2,6 +2,29 @@ import * as THREE from 'three';
 import { Z_GAP } from '../../constants';
 import { mode, nowStep } from './guideModules';
 
+const rotateVector = (vector, pivot, quaternion) => {
+  vector.sub(pivot);
+  vector.applyQuaternion(quaternion);
+  vector.add(pivot);
+  return vector;
+};
+
+const updateVertexZPosition = (positionAttribute, selectedVertices) => {
+  for (let i = 0; i < positionAttribute.count; i++) {
+    if (selectedVertices.has(i)) {
+      const z = positionAttribute.getZ(i);
+      if (z !== 0) {
+        const zAdjustment =
+          (mode === 'puppy' && nowStep === 3) || nowStep === 11
+            ? Z_GAP * 2
+            : Z_GAP;
+        positionAttribute.setZ(i, z < 0 ? z + zAdjustment : z - zAdjustment);
+      }
+    }
+  }
+  positionAttribute.needsUpdate = true;
+};
+
 const rotateSelectedVertices = (
   positionAttribute,
   selectedVertices,
@@ -11,18 +34,15 @@ const rotateSelectedVertices = (
   rotatedData
 ) => {
   const stepAngle = (totalRotation / frames) * (clockwise ? 1 : -1);
-
   let currentFrame = 0;
 
   const performRotation = () => {
-    const startPoint = rotatedData.startPoint;
-    const endPoint = rotatedData.endPoint;
+    const { startPoint, endPoint } = rotatedData;
 
     if (startPoint && endPoint) {
       const direction = new THREE.Vector3()
         .subVectors(endPoint, startPoint)
         .normalize();
-
       const pivot = new THREE.Vector3()
         .addVectors(startPoint, endPoint)
         .multiplyScalar(0.5);
@@ -31,18 +51,23 @@ const rotateSelectedVertices = (
         stepAngle
       );
 
-      const vector = new THREE.Vector3();
+      const positionArray = positionAttribute.array;
+      const itemSize = positionAttribute.itemSize;
+
       for (let i = 0; i < positionAttribute.count; i++) {
         if (selectedVertices.has(i)) {
-          const x = positionAttribute.getX(i);
-          const y = positionAttribute.getY(i);
-          const z = positionAttribute.getZ(i);
-          vector.set(x, y, z);
+          const index = i * itemSize;
+          const vector = new THREE.Vector3(
+            positionArray[index],
+            positionArray[index + 1],
+            positionArray[index + 2]
+          );
 
-          vector.sub(pivot);
-          vector.applyQuaternion(unfoldQuaternion);
-          vector.add(pivot);
-          positionAttribute.setXYZ(i, vector.x, vector.y, vector.z);
+          const rotatedVector = rotateVector(vector, pivot, unfoldQuaternion);
+
+          positionArray[index] = rotatedVector.x;
+          positionArray[index + 1] = rotatedVector.y;
+          positionArray[index + 2] = rotatedVector.z;
         }
       }
       positionAttribute.needsUpdate = true;
@@ -52,23 +77,7 @@ const rotateSelectedVertices = (
     if (currentFrame < frames) {
       requestAnimationFrame(performRotation);
     } else {
-      for (let i = 0; i < positionAttribute.count; i++) {
-        if (selectedVertices.has(i)) {
-          const z = positionAttribute.getZ(i);
-          if (z !== 0) {
-            if (z < 0) {
-              if ((mode === 'puppy' && nowStep === 3) || nowStep === 11) {
-                positionAttribute.setZ(i, z + Z_GAP * 2);
-              } else {
-                positionAttribute.setZ(i, z + Z_GAP);
-              }
-            } else {
-              positionAttribute.setZ(i, z - Z_GAP);
-            }
-          }
-        }
-      }
-      positionAttribute.needsUpdate = true;
+      updateVertexZPosition(positionAttribute, selectedVertices);
     }
   };
 
@@ -80,16 +89,20 @@ const findAndSelectClosestVertices = (
   positionAttribute,
   selectedVertices
 ) => {
-  const vertex = new THREE.Vector3();
+  const positionArray = positionAttribute.array;
+  const itemSize = positionAttribute.itemSize;
 
   positions.forEach(target => {
-    const targetPosition = new THREE.Vector3(target.x, target.y, target.z);
     let minDistance = Infinity;
     let closestVertexIndex = -1;
 
     for (let i = 0; i < positionAttribute.count; i++) {
-      vertex.fromBufferAttribute(positionAttribute, i);
-      const distance = vertex.distanceTo(targetPosition);
+      const index = i * itemSize;
+
+      const dx = target.x - positionArray[index];
+      const dy = target.y - positionArray[index + 1];
+      const dz = target.z - positionArray[index + 2];
+      const distance = dx * dx + dy * dy + dz * dz;
 
       if (distance < minDistance) {
         minDistance = distance;

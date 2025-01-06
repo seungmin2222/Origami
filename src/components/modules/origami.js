@@ -200,49 +200,6 @@ const updateFoldOnMouseMove = () => {
 const handleMouseDown = event => {
   selectedVerticesInitializeSet();
 
-  if (mode === 'plane') {
-    if (nowStep === 1) {
-      if (guideStep[nowStep].unfold) {
-        const positions = rotatedData.face;
-
-        if (positions) {
-          findAndSelectClosestVertices(positions, allVertex, selectedVertices);
-        }
-      }
-    } else if (nowStep === 10) {
-      const positions = stepPlaneVertex.stepVertex9;
-      findAndSelectClosestVertices(positions, allVertex, selectedVertices);
-    } else if (nowStep === 11) {
-      const positions = stepPlaneVertex.stepVertex10;
-      findAndSelectClosestVertices(positions, allVertex, selectedVertices);
-    } else if (!isGuideMode) {
-      const positions = rotatedData.face;
-      if (positions) {
-        findAndSelectClosestVertices(positions, allVertex, selectedVertices);
-      }
-    }
-  } else if (mode === 'puppy') {
-    if (nowStep === 2) {
-      if (guideStep[nowStep].unfold) {
-        const positions = rotatedData.face;
-
-        if (positions) {
-          findAndSelectClosestVertices(positions, allVertex, selectedVertices);
-        }
-      }
-    }
-  }
-
-  if (pointsMarker.visible) {
-    initialMousePosition.set(event.clientX, event.clientY);
-    isDragging = true;
-
-    clickedRedMarker.position.copy(pointsMarker.position);
-    clickedRedMarker.visible = true;
-    pointsMarker.visible = false;
-    controls.enabled = false;
-  }
-
   const intersects = raycaster.intersectObject(paper);
 
   if (intersects.length > 0) {
